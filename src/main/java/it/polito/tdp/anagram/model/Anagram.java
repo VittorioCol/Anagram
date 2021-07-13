@@ -19,10 +19,10 @@ public class Anagram {
 			risultato.add(parziale) ;
 		} else {
 			
-			for(int pos=0; pos<lettere.length(); pos++) {
-				char tentativo = lettere.charAt(pos) ; 
+			for(int i=0; i<lettere.length(); i++) {
+				char tentativo = lettere.charAt(i) ; 
 				String nuovaParziale = parziale + tentativo ;
-				String nuovaLettere = lettere.substring(0, pos)+lettere.substring(pos+1) ;
+				String nuovaLettere = lettere.substring(0, i)+lettere.substring(i+1) ;
 				permuta(nuovaParziale, nuovaLettere, livello+1, risultato) ;	
 			}
 		}
